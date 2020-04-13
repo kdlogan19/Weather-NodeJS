@@ -14,7 +14,7 @@ weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const address = search.value
     console.log(address)
-    const weatherUrl = 'http://localhost:3000/weather?address=' + address
+    const weatherUrl = '/weather?address=' + address
     pMessage1.textContent = 'Loading..'
     pMessage2.textContent = ''
     fetch(weatherUrl).then((response) => {
