@@ -18,16 +18,17 @@ weatherForm.addEventListener('submit', (e) => {
     pMessage1.textContent = 'Loading..'
     pMessage2.textContent = ''
     fetch(weatherUrl).then((response) => {
-    response.json().then((data) => {
-        if (data.error) {
-            console.log(data.error);
-            pMessage1.textContent = ''
-            pMessage2.textContent = JSON.stringify(data.error)
-            
-        } else {
-            console.log(data)
-            pMessage1.textContent = JSON.stringify(data)
-        }
+        response.json().then((data) => {
+            if (data.error) {
+                console.log(data.error);
+                pMessage1.textContent = ''
+                pMessage2.textContent = JSON.stringify(data.error)
+                
+            } else {
+                                
+                pMessage1.textContent = 'Weather at the '+ data.location + ' has ' + data.sky 
+                + ' and current temprature is ' + data.temp + ' with humidity ' + data.humidity
+            }
     })
 })
     
