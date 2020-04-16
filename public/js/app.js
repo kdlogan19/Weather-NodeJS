@@ -27,7 +27,7 @@ weatherForm.addEventListener('submit', (e) => {
             } else {
                                 
                 pMessage1.textContent = 'Weather at the '+ data.location + ' has ' + data.sky 
-                + ' and current temprature is ' + data.temp + ' with humidity ' + data.humidity
+                + ' and current temprature is ' + data.temp + ' with humidity ' + data.humidity + '%'
             }
     })
 })
